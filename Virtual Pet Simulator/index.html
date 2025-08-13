@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Pet Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Virtual Pet Simulator</h1>
+    </header>
+    <main>
+      <div class="pet-area">
+        <div class="pet-container">
+          <img id="pet-img" src="pet-happy.PNG" alt="Virtual Pet">
+          <img id="pet-eating" src="pet-eating.PNG" class="eating-img hidden" alt="Pet Eating">
+          <img id="pet-playing" src="pet-playing.png" class="playing-img hidden" alt="Pet Playing">
+          <img id="pet-sleeping" src="pet-sleep.PNG" class="sleeping-img hidden" alt="Pet Sleeping">
+        </div>
+        <img id="pet-toy" src="ball.png" class="toy hidden" draggable="true" alt="Toy Ball">
+        <div class="state-text" id="pet-state">Happy</div>
+      </div>
+      <div class="attributes">
+        <div class="attribute">
+          <span>Hunger</span>
+          <div class="progress-container"><div id="hunger-bar" class="progress-bar"></div></div>
+        </div>
+        <div class="attribute">
+          <span>Happiness</span>
+          <div class="progress-container"><div id="happiness-bar" class="progress-bar"></div></div>
+        </div>
+        <div class="attribute">
+          <span>Energy</span>
+          <div class="progress-container"><div id="energy-bar" class="progress-bar"></div></div>
+        </div>
+        <div class="attribute">
+          <span>Health</span>
+          <div class="progress-container"><div id="health-bar" class="progress-bar"></div></div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="feed-btn">Feed</button>
+        <button id="play-btn">Play</button>
+        <button id="sleep-btn">Sleep</button>
+      </div>
+      <div id="achievement-popup" class="hidden"></div>
+      <div id="pet-prompt" class="hidden"></div>
+      <div id="bg-effect"></div>
+    </main>
+  </div>
+  <audio id="pet-sound" src=""></audio>
+  <script src="script.js"></script>
+</body>
+</html>
