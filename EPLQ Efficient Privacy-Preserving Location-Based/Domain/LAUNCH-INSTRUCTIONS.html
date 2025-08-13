@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPLQ Server Instructions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .step { background: #f4f4f4; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .command { background: #333; color: #fff; padding: 10px; border-radius: 3px; font-family: monospace; }
+        .highlight { background: #ffeb3b; padding: 2px 4px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 EPLQ Application Launch Instructions</h1>
+    
+    <div class="step">
+        <h3>Option 1: Using the Batch File (Easiest)</h3>
+        <p>Double-click the <strong>start-server.bat</strong> file in this folder.</p>
+    </div>
+    
+    <div class="step">
+        <h3>Option 2: Using Command Line</h3>
+        <p>1. Open Command Prompt (cmd)</p>
+        <p>2. Navigate to this folder:</p>
+        <div class="command">cd "c:\Internship projects\Unified Mentor\EPLQ Efficient Privacy-Preserving Location-Based\Domain"</div>
+        <p>3. Start the server:</p>
+        <div class="command">python -m http.server 8000</div>
+    </div>
+    
+    <div class="step">
+        <h3>Option 3: Direct File Access</h3>
+        <p>Simply double-click <strong>index.html</strong> to open directly in browser (limited functionality).</p>
+    </div>
+    
+    <div class="step">
+        <h3>⚠️ Important: Firebase Setup Required</h3>
+        <p>Before the application works fully, you MUST:</p>
+        <ol>
+            <li>Create a Firebase project at <a href="https://console.firebase.google.com">Firebase Console</a></li>
+            <li>Update <span class="highlight">js/config.js</span> with your Firebase credentials</li>
+            <li>Enable Authentication and Firestore in Firebase</li>
+        </ol>
+        <p>📋 See <strong>SETUP-CHECKLIST.md</strong> for detailed instructions.</p>
+    </div>
+    
+    <div class="step">
+        <h3>🌐 Access the Application</h3>
+        <p>Once server is running, open your browser and go to:</p>
+        <div class="command">http://localhost:8000</div>
+    </div>
+</body>
+</html>

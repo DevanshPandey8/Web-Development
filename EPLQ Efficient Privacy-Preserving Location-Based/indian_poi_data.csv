@@ -1,0 +1,101 @@
+id,name,category,subcategory,latitude,longitude,city,state,address,phone,rating,description
+1,All India Institute of Medical Sciences,Healthcare,Hospital,28.5672,77.2100,New Delhi,Delhi,"AIIMS Ansari Nagar, New Delhi",+91-11-26588500,4.5,Premier medical institute and hospital
+2,Red Fort,Tourism,Historical Monument,28.6562,77.2410,New Delhi,Delhi,"Netaji Subhash Marg, Chandni Chowk",+91-11-23277705,4.3,UNESCO World Heritage Site - Mughal fortress
+3,India Gate,Tourism,Monument,28.6129,77.2295,New Delhi,Delhi,"Rajpath, India Gate",NA,4.4,War memorial arch in New Delhi
+4,Connaught Place,Shopping,Mall,28.6315,77.2167,New Delhi,Delhi,"Connaught Place, New Delhi",NA,4.2,Commercial and business center
+5,IIT Delhi,Education,University,28.5449,77.1928,New Delhi,Delhi,"Hauz Khas, New Delhi",+91-11-26591011,4.6,Premier engineering institute
+6,Karim's Restaurant,Food,Restaurant,28.6506,77.2334,New Delhi,Delhi,"Gali Kababian, Jama Masjid",+91-11-23264981,4.1,Famous Mughlai cuisine restaurant
+7,Apollo Hospital,Healthcare,Hospital,28.5244,77.2066,New Delhi,Delhi,"Sarita Vihar, New Delhi",+91-11-26925858,4.3,Multi-specialty hospital
+8,Humayun's Tomb,Tourism,Historical Monument,28.5933,77.2507,New Delhi,Delhi,"Mathura Road, Nizamuddin",+91-11-24358229,4.4,UNESCO World Heritage Site - Mughal tomb
+9,Select City Walk,Shopping,Mall,28.5244,77.2066,New Delhi,Delhi,"A-3, District Centre, Saket",+91-11-40885000,4.3,Premium shopping mall
+10,Metro Cash & Carry,Shopping,Wholesale,28.4595,77.0266,Gurgaon,Haryana,"Sector 29, Gurgaon",+91-124-4719999,4.0,Wholesale retail store
+11,Gateway of India,Tourism,Monument,18.9220,72.8347,Mumbai,Maharashtra,"Apollo Bunder, Colaba",NA,4.2,Historic monument overlooking Arabian Sea
+12,Chhatrapati Shivaji Terminus,Transportation,Railway Station,18.9398,72.8355,Mumbai,Maharashtra,"Chhatrapati Shivaji Terminus Area",+91-22-22694040,4.3,UNESCO World Heritage railway station
+13,Marine Drive,Tourism,Scenic Spot,18.9441,72.8196,Mumbai,Maharashtra,"Marine Drive, Mumbai",NA,4.5,Queen's Necklace - famous promenade
+14,Tata Memorial Hospital,Healthcare,Hospital,18.9929,72.8336,Mumbai,Maharashtra,"Dr Ernest Borges Marg, Parel",+91-22-24177000,4.4,Premier cancer treatment hospital
+15,IIT Bombay,Education,University,19.1334,72.9133,Mumbai,Maharashtra,"Powai, Mumbai",+91-22-25722545,4.7,Premier engineering institute
+16,Taj Hotel Mumbai,Hospitality,Hotel,18.9216,72.8331,Mumbai,Maharashtra,"Apollo Bunder, Colaba",+91-22-66013366,4.6,Luxury heritage hotel
+17,Phoenix Mills,Shopping,Mall,18.9929,72.8336,Mumbai,Maharashtra,"462, Senapati Bapat Marg, Lower Parel",+91-22-24961964,4.4,Premium shopping and entertainment complex
+18,Siddhivinayak Temple,Religion,Temple,19.0166,72.8308,Mumbai,Maharashtra,"SK Bole Marg, Prabhadevi",+91-22-24223547,4.3,Famous Hindu temple dedicated to Lord Ganesha
+19,Bandra-Worli Sea Link,Transportation,Bridge,19.0374,72.8118,Mumbai,Maharashtra,"Bandra-Worli Sea Link",NA,4.5,Cable-stayed bridge connecting Bandra and Worli
+20,Antilia,Landmark,Residential,18.9707,72.8084,Mumbai,Maharashtra,"Altamount Road, Cumballa Hill",NA,3.8,Private skyscraper residence
+21,Howrah Bridge,Tourism,Bridge,22.5851,88.3468,Kolkata,West Bengal,"Howrah Bridge, Kolkata",NA,4.2,Iconic cantilever bridge over Hooghly River
+22,Victoria Memorial,Tourism,Museum,22.5448,88.3426,Kolkata,West Bengal,"1 Queens Way, Maidan",+91-33-22231890,4.4,British-era museum and monument
+23,IIT Kharagpur,Education,University,22.3149,87.3105,Kharagpur,West Bengal,"Kharagpur, West Bengal",+91-3222-255221,4.6,Premier engineering institute
+24,Medical College Hospital,Healthcare,Hospital,22.5726,88.3639,Kolkata,West Bengal,"88, College Street",+91-33-22412490,4.1,Government medical college and hospital
+25,Park Street,Food,Restaurant Strip,22.5548,88.3631,Kolkata,West Bengal,"Park Street, Kolkata",NA,4.3,Famous food and entertainment street
+26,Dakshineswar Kali Temple,Religion,Temple,22.6548,88.3570,Kolkata,West Bengal,"Dakshineswar, Kolkata",+91-33-25644170,4.4,Famous Kali temple on Hooghly River
+27,New Market,Shopping,Market,22.5562,88.3501,Kolkata,West Bengal,"Lindsay Street, New Market",NA,4.0,Historic shopping market
+28,Salt Lake Stadium,Sports,Stadium,22.5643,88.4108,Kolkata,West Bengal,"Bidhannagar, Salt Lake City",+91-33-23340204,4.2,One of the largest football stadiums in world
+29,Science City,Education,Science Museum,22.5449,88.4050,Kolkata,West Bengal,"JBS Haldane Avenue",+91-33-23573289,4.3,Interactive science museum and planetarium
+30,Netaji Subhas Chandra Bose Airport,Transportation,Airport,22.6540,88.4467,Kolkata,West Bengal,"Jessore Road, Dumdum",+91-33-25119033,4.1,International airport serving Kolkata
+31,Bangalore Palace,Tourism,Palace,12.9983,77.5920,Bangalore,Karnataka,"Vasanth Nagar, Bangalore",+91-80-23341005,4.2,Tudor-style palace inspired by Windsor Castle
+32,Cubbon Park,Tourism,Park,12.9763,77.5905,Bangalore,Karnataka,"Kasturba Road, Bangalore",NA,4.4,Historic park in heart of Bangalore
+33,IISc Bangalore,Education,University,13.0218,77.5671,Bangalore,Karnataka,"CV Raman Road, Bangalore",+91-80-22932300,4.7,Premier science research institute
+34,Manipal Hospital,Healthcare,Hospital,12.9539,77.6405,Bangalore,Karnataka,"98, HAL Airport Road",+91-80-25024444,4.4,Multi-specialty hospital
+35,UB City Mall,Shopping,Mall,12.9719,77.5937,Bangalore,Karnataka,"24, Vittal Mallya Road",+91-80-22013456,4.5,Luxury shopping and dining destination
+36,Mysore Palace,Tourism,Palace,12.3051,76.6551,Mysore,Karnataka,"Sayyaji Rao Road, Agrahara",+91-821-2421051,4.6,Indo-Saracenic palace of Wodeyar dynasty
+37,ISKCON Temple Bangalore,Religion,Temple,12.9434,77.6169,Bangalore,Karnataka,"Hare Krishna Hill, Rajajinagar",+91-80-23471956,4.5,Modern Hindu temple complex
+38,Lalbagh Botanical Garden,Tourism,Garden,12.9507,77.5848,Bangalore,Karnataka,"Mavalli, Bangalore",+91-80-22206469,4.4,Historic botanical garden with glass house
+39,Brigade Road,Shopping,Shopping Street,12.9716,77.6098,Bangalore,Karnataka,"Brigade Road, Bangalore",NA,4.2,Popular shopping and commercial street
+40,Kempegowda International Airport,Transportation,Airport,13.1986,77.7066,Bangalore,Karnataka,"Devanahalli, Bangalore",+91-80-66782425,4.3,International airport serving Bangalore
+41,Hawa Mahal,Tourism,Palace,26.9239,75.8267,Jaipur,Rajasthan,"Hawa Mahal Road, Badi Choupad",+91-141-2618862,4.3,Pink sandstone palace with intricate windows
+42,Amber Fort,Tourism,Fort,26.9855,75.8513,Jaipur,Rajasthan,"Devisinghpura, Amer",+91-141-2530264,4.5,Hilltop fort and palace complex
+43,City Palace Jaipur,Tourism,Palace,26.9260,75.8235,Jaipur,Rajasthan,"Tulsi Marg, Gangori Bazaar",+91-141-4088888,4.4,Royal palace complex with museums
+44,IIT Jodhpur,Education,University,26.4724,73.1137,Jodhpur,Rajasthan,"NH 65, Nagaur Road, Karwar",+91-291-2801910,4.5,Premier engineering institute
+45,SMS Hospital,Healthcare,Hospital,26.9158,75.8233,Jaipur,Rajasthan,"JLN Marg, Jaipur",+91-141-2560291,4.0,Government medical college and hospital
+46,Jantar Mantar Jaipur,Tourism,Observatory,26.9244,75.8244,Jaipur,Rajasthan,"Gangori Bazaar, J.D.A. Market",+91-141-2610494,4.2,UNESCO World Heritage astronomical observatory
+47,Johari Bazaar,Shopping,Market,26.9239,75.8255,Jaipur,Rajasthan,"Johari Bazaar, Jaipur",NA,4.1,Traditional jewelry and textile market
+48,Mehrangarh Fort,Tourism,Fort,26.2970,73.0184,Jodhpur,Rajasthan,"Fort Road, Jodhpur",+91-291-2548790,4.7,Magnificent hilltop fort overlooking Blue City
+49,Umaid Bhawan Palace,Hospitality,Hotel,26.2870,73.0370,Jodhpur,Rajasthan,"Circuit House Road, Cantt",+91-291-2510101,4.6,Art Deco palace converted to luxury hotel
+50,Jaisalmer Fort,Tourism,Fort,26.9157,70.9083,Jaisalmer,Rajasthan,"Fort Rd, Jaisalmer",+91-2992-252406,4.4,Living fort made of golden sandstone
+51,Charminar,Tourism,Monument,17.3616,78.4747,Hyderabad,Telangana,"Charminar Road, Char Kaman",+91-40-24521214,4.2,Iconic 16th-century mosque and monument
+52,Golconda Fort,Tourism,Fort,17.3833,78.4011,Hyderabad,Telangana,"Ibrahim Bagh, Golconda",+91-40-23008915,4.3,Medieval fortress famous for acoustic effects
+53,IIT Hyderabad,Education,University,17.5943,78.1212,Hyderabad,Telangana,"Kandi, Sangareddy",+91-40-23016032,4.6,Premier engineering institute
+54,Apollo Hospital Hyderabad,Healthcare,Hospital,17.4126,78.4071,Hyderabad,Telangana,"Jubilee Hills, Hyderabad",+91-40-23607777,4.5,Leading multi-specialty hospital
+55,Ramoji Film City,Entertainment,Theme Park,17.2543,78.6808,Hyderabad,Telangana,"Hayathnagar, Hyderabad",+91-40-30413700,4.4,World's largest film studio complex
+56,Hussain Sagar,Tourism,Lake,17.4239,78.4738,Hyderabad,Telangana,"Tank Bund Road, Hyderabad",NA,4.1,Heart-shaped lake with Buddha statue
+57,Laad Bazaar,Shopping,Market,17.3608,78.4744,Hyderabad,Telangana,"Laad Bazaar, Charminar",NA,4.0,Traditional market for bangles and pearls
+58,Birla Mandir,Religion,Temple,17.4062,78.4691,Hyderabad,Telangana,"Hill Fort Road, Kala Pahad",+91-40-23235002,4.3,White marble temple dedicated to Lord Venkateswara
+59,Forum Sujana Mall,Shopping,Mall,17.4467,78.3840,Hyderabad,Telangana,"Kukatpally, Hyderabad",+91-40-44664466,4.3,Popular shopping and entertainment complex
+60,Rajiv Gandhi International Airport,Transportation,Airport,17.2403,78.4294,Hyderabad,Telangana,"Shamshabad, Hyderabad",+91-40-66546000,4.2,International airport serving Hyderabad
+61,Golden Temple,Religion,Temple,31.6200,74.8765,Amritsar,Punjab,"Golden Temple Road, Atta Mandi",+91-183-2553954,4.8,Holiest Sikh shrine with golden dome
+62,Wagah Border,Tourism,Border Crossing,31.6044,74.5693,Amritsar,Punjab,"Attari-Wagah Border",+91-183-2401999,4.3,India-Pakistan border with flag ceremony
+63,Jallianwala Bagh,Tourism,Memorial,31.6205,74.8792,Amritsar,Punjab,"Jallianwala Bagh, Golden Temple Road",+91-183-2553954,4.2,Memorial garden of 1919 massacre
+64,IIT Ropar,Education,University,30.9691,76.4753,Rupnagar,Punjab,"Bara Phool, Rupnagar",+91-1881-242000,4.4,Premier engineering institute
+65,Christian Medical College,Healthcare,Hospital,30.1986,76.8206,Ludhiana,Punjab,"Brown Road, Ludhiana",+91-161-2302051,4.2,Medical college and hospital
+66,Mata Mansa Devi Temple,Religion,Temple,30.1986,77.0206,Panchkula,Haryana,"Bilaspur Road, Panchkula",+91-172-2585555,4.4,Hindu temple on Shivalik Hills
+67,Rock Garden,Tourism,Garden,30.7518,76.8066,Chandigarh,Chandigarh,"Sector 1, Chandigarh",+91-172-2740644,4.3,Sculpture garden made from recycled materials
+68,Elante Mall,Shopping,Mall,30.7070,76.8003,Chandigarh,Chandigarh,"Plot No. 178-178A, Industrial Area",+91-172-5000500,4.4,Large shopping and entertainment complex
+69,Gurudwara Bangla Sahib,Religion,Temple,28.6333,77.2084,New Delhi,Delhi,"Ashoka Road, Connaught Place",+91-11-23365358,4.6,Important Sikh temple in Delhi
+70,Akshardham Temple,Religion,Temple,28.6127,77.2773,New Delhi,Delhi,"National Highway 24, Akshardham",+91-11-43442344,4.5,Modern Hindu temple complex
+71,Meenakshi Temple,Religion,Temple,9.9197,78.1194,Madurai,Tamil Nadu,"Madurai Main, Madurai",+91-452-2341360,4.6,Historic Hindu temple with colorful towers
+72,Marina Beach,Tourism,Beach,13.0475,80.2824,Chennai,Tamil Nadu,"Marina Beach Road, Chennai",NA,4.1,Second longest urban beach in world
+73,IIT Madras,Education,University,12.9915,80.2336,Chennai,Tamil Nadu,"Sardar Patel Road, Adyar",+91-44-22578000,4.7,Premier engineering institute
+74,Apollo Hospital Chennai,Healthcare,Hospital,13.0569,80.2460,Chennai,Tamil Nadu,"21, Greams Lane, Off Greams Road",+91-44-28290200,4.4,Leading multi-specialty hospital
+75,Express Avenue,Shopping,Mall,13.0594,80.2654,Chennai,Tamil Nadu,"Royapettah, Chennai",+91-44-42244224,4.3,Popular shopping mall in Chennai
+76,Kapaleeshwarar Temple,Religion,Temple,13.0339,80.2619,Chennai,Tamil Nadu,"Kapaleeswarar Sannadhi Street, Mylapore",+91-44-24641670,4.4,7th-century Shiva temple in Dravidian style
+77,Chennai Central Railway Station,Transportation,Railway Station,13.0827,80.2707,Chennai,Tamil Nadu,"Wall Tax Road, Park Town",+91-44-25354545,4.0,Major railway terminus in Chennai
+78,Elliot's Beach,Tourism,Beach,12.9984,80.2679,Chennai,Tamil Nadu,"Besant Nagar, Chennai",NA,4.2,Clean and less crowded beach in Chennai
+79,Vandalur Zoo,Entertainment,Zoo,12.8777,80.0982,Chennai,Tamil Nadu,"GST Road, Vandalur",+91-44-22797024,4.1,One of largest zoological parks in India
+80,Chennai International Airport,Transportation,Airport,12.9941,80.1709,Chennai,Tamil Nadu,"Meenambakkam, Chennai",+91-44-22560551,4.2,International airport serving Chennai
+81,Mysore Palace,Tourism,Palace,12.3051,76.6551,Mysore,Karnataka,"Sayyaji Rao Road, Agrahara",+91-821-2421051,4.6,Indo-Saracenic palace illuminated at night
+82,Brindavan Gardens,Tourism,Garden,12.4244,76.5692,Mysore,Karnataka,"KRS Dam, Srirangapatna",+91-8236-252423,4.3,Terraced gardens with musical fountains
+83,Chamundi Hills,Tourism,Hill Station,12.2722,76.6730,Mysore,Karnataka,"Chamundi Hills Road",+91-821-2481316,4.4,Sacred hill with Chamundeshwari Temple
+84,JSS Medical College,Healthcare,Hospital,12.2958,76.6394,Mysore,Karnataka,"SS Nagara, Mysore",+91-821-2548416,4.2,Medical college and hospital
+85,Devaraja Market,Shopping,Market,12.3048,76.6512,Mysore,Karnataka,"Devaraja Market, Mysore",NA,4.0,Traditional market for spices and silk
+86,St. Philomena's Cathedral,Religion,Church,12.3110,76.6640,Mysore,Karnataka,"Lourdes Nagar, Mysore",+91-821-2425588,4.3,Neo-Gothic Catholic cathedral
+87,Karanji Lake,Tourism,Lake,12.2931,76.6831,Mysore,Karnataka,"Karanji Lake Road",+91-821-2515901,4.2,Lake with nature park and aviary
+88,Government Silk Weaving Factory,Tourism,Factory,12.3048,76.6456,Mysore,Karnataka,"Manandavadi Road",+91-821-2421803,4.1,Traditional silk weaving demonstration
+89,Lalitha Mahal,Tourism,Palace,12.2861,76.6492,Mysore,Karnataka,"Lalitha Mahal Road",+91-821-2470470,4.3,Second largest palace in Mysore
+90,Mysore Railway Station,Transportation,Railway Station,12.3081,76.6508,Mysore,Karnataka,"Irwin Road, Mysore",+91-821-2423318,4.1,Main railway station of Mysore
+91,Sabarmati Ashram,Tourism,Museum,23.0615,72.5827,Ahmedabad,Gujarat,"Ashram Road, Ahmedabad",+91-79-27557277,4.4,Gandhi's residence during independence movement
+92,Akshardham Gandhinagar,Religion,Temple,23.2419,72.6647,Gandhinagar,Gujarat,"Sector 20, Gandhinagar",+91-2712-665555,4.5,Large Hindu temple complex
+93,IIT Gandhinagar,Education,University,23.2130,72.6827,Gandhinagar,Gujarat,"Palaj, Gandhinagar",+91-79-23955000,4.5,Premier engineering institute
+94,Sidi Saiyyed Mosque,Tourism,Mosque,23.0302,72.5881,Ahmedabad,Gujarat,"Lal Darwaja, Ahmedabad",+91-79-25506644,4.3,16th-century mosque with intricate stone lattice
+95,Manek Chowk,Food,Market,23.0267,72.5819,Ahmedabad,Gujarat,"Manek Chowk, Ahmedabad",NA,4.2,Night food market and jewelry market by day
+96,Sterling Hospital,Healthcare,Hospital,23.0315,72.5667,Ahmedabad,Gujarat,"Off Gurukul Road, Memnagar",+91-79-66756666,4.3,Multi-specialty hospital
+97,Alpha One Mall,Shopping,Mall,23.0685,72.5341,Ahmedabad,Gujarat,"Vastrapur, Ahmedabad",+91-79-40405555,4.2,Popular shopping and entertainment complex
+98,Kankaria Lake,Tourism,Lake,23.0088,72.5947,Ahmedabad,Gujarat,"Kankaria, Ahmedabad",+91-79-25462088,4.3,Artificial lake with recreational activities
+99,Calico Museum,Tourism,Museum,23.0489,72.5447,Ahmedabad,Gujarat,"Shahibag, Ahmedabad",+91-79-22868172,4.4,World-renowned textile museum
+100,Sardar Vallabhbhai Patel Airport,Transportation,Airport,23.0772,72.6347,Ahmedabad,Gujarat,"Airport Road, Hansol",+91-79-26869211,4.1,International airport serving Ahmedabad

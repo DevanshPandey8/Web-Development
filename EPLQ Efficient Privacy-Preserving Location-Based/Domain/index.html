@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLQ - Efficient Privacy-Preserving Location-Based Query</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> EPLQ System</h1>
+            <p>Efficient Privacy-Preserving Location-Based Query</p>
+            <nav>
+                <button id="homeBtn" class="nav-btn active">Home</button>
+                <button id="adminBtn" class="nav-btn">Admin</button>
+                <button id="userBtn" class="nav-btn">User</button>
+                <button id="aboutBtn" class="nav-btn">About</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="hero">
+                    <h2>Welcome to EPLQ</h2>
+                    <p>A cutting-edge privacy-preserving location-based query system that enables secure spatial range queries while protecting user location privacy through advanced encryption techniques.</p>
+                    
+                    <div class="features">
+                        <div class="feature-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Privacy-Preserving</h3>
+                            <p>Advanced encryption ensures your location data remains private during queries</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-search-location"></i>
+                            <h3>Spatial Range Queries</h3>
+                            <p>Efficient searching for Points of Interest within specified ranges</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tree"></i>
+                            <h3>Tree Index Structure</h3>
+                            <p>Optimized query performance using advanced indexing algorithms</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-virus"></i>
+                            <h3>Secure Authentication</h3>
+                            <p>Robust user authentication and authorization system</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Section -->
+            <section id="admin" class="section">
+                <div class="module-container">
+                    <h2><i class="fas fa-user-shield"></i> Admin Module</h2>
+                    
+                    <div class="auth-container" id="adminAuth">
+                        <div class="auth-tabs">
+                            <button class="tab-btn active" data-tab="adminLogin">Login</button>
+                            <button class="tab-btn" data-tab="adminRegister">Register</button>
+                        </div>
+                        
+                        <div id="adminLogin" class="auth-form active">
+                            <h3>Admin Login</h3>
+                            <form id="adminLoginForm">
+                                <input type="email" id="adminEmail" placeholder="Email" required>
+                                <input type="password" id="adminPassword" placeholder="Password" required>
+                                <button type="submit">Login</button>
+                            </form>
+                            <div class="forgot-password">
+                                <button type="button" id="adminForgotPassword" class="forgot-btn">Forgot Password?</button>
+                            </div>
+                        </div>
+                        
+                        <div id="adminRegister" class="auth-form">
+                            <h3>Admin Registration</h3>
+                            <form id="adminRegisterForm">
+                                <input type="text" id="adminName" placeholder="Full Name" required>
+                                <input type="email" id="adminRegEmail" placeholder="Email" required>
+                                <input type="password" id="adminRegPassword" placeholder="Password" required>
+                                <button type="submit">Register</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+                        <h3>Upload Location Data</h3>
+                        
+                        <!-- Upload Method Tabs -->
+                        <div class="upload-tabs">
+                            <button class="upload-tab-btn active" data-tab="singleUpload">Single Upload</button>
+                            <button class="upload-tab-btn" data-tab="bulkUpload">Bulk Upload</button>
+                            <button class="upload-tab-btn" data-tab="csvUpload">CSV Upload</button>
+                        </div>
+                        
+                        <!-- Single Upload Section -->
+                        <div id="singleUpload" class="upload-section active">
+                            <h4>📍 Single POI Upload</h4>
+                            <form id="singleUploadForm">
+                                <div class="form-group">
+                                    <label>POI Name:</label>
+                                    <input type="text" id="poiName" name="poiName" placeholder="Point of Interest Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Latitude:</label>
+                                    <input type="number" id="latitude" name="latitude" step="any" placeholder="Latitude" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Longitude:</label>
+                                    <input type="number" id="longitude" name="longitude" step="any" placeholder="Longitude" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Category:</label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Select Category</option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="hospital">Hospital</option>
+                                        <option value="education">Education</option>
+                                        <option value="safety">Safety</option>
+                                        <option value="school">School</option>
+                                        <option value="gas_station">Gas Station</option>
+                                        <option value="bank">Bank</option>
+                                        <option value="pharmacy">Pharmacy</option>
+                                        <option value="shopping">Shopping</option>
+                                        <option value="entertainment">Entertainment</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description:</label>
+                                    <textarea id="description" name="description" placeholder="POI Description"></textarea>
+                                </div>
+                                <button type="submit">Upload Encrypted Data</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Bulk Upload Section -->
+                        <div id="bulkUpload" class="upload-section">
+                            <h4>📋 Bulk POI Upload</h4>
+                            <div class="bulk-upload-info">
+                                <p>Add multiple POIs at once. Each line should contain: Name, Latitude, Longitude, Category, Description</p>
+                                <p><strong>Example:</strong> Central Hospital, 40.7589, -73.9851, hospital, 24/7 emergency services</p>
+                            </div>
+                            <form id="bulkUploadForm">
+                                <div class="form-group">
+                                    <label>Bulk POI Data (one per line):</label>
+                                    <textarea id="bulkPOIData" name="bulkPOIData" rows="10" placeholder="Enter POI data, one per line:
+Central Hospital, 40.7589, -73.9851, hospital, 24/7 emergency services
+City Library, 40.7614, -73.9776, education, Public library with free WiFi
+Coffee Shop, 40.7505, -73.9934, restaurant, Local coffee and pastries"></textarea>
+                                </div>
+                                <div class="bulk-options">
+                                    <label><input type="checkbox" id="skipErrors" checked> Skip invalid entries and continue</label>
+                                    <label><input type="checkbox" id="skipDuplicates"> Skip potential duplicates</label>
+                                    <label><input type="checkbox" id="validateCoords" checked> Validate coordinates</label>
+                                </div>
+                                <button type="submit">Upload All POIs (Encrypted)</button>
+                            </form>
+                        </div>
+                        
+                        <!-- CSV Upload Section -->
+                        <div id="csvUpload" class="upload-section">
+                            <h4>📁 CSV File Upload</h4>
+                            <div class="csv-upload-info">
+                                <p>Upload a CSV file with POI data. Required columns: name, latitude, longitude, category, description</p>
+                                <div class="csv-template">
+                                    <h5>CSV Template:</h5>
+                                    <code>name,latitude,longitude,category,description<br>
+                                    Central Hospital,40.7589,-73.9851,hospital,24/7 emergency services<br>
+                                    City Library,40.7614,-73.9776,education,Public library with free WiFi</code>
+                                    <button id="downloadTemplate" class="template-btn">Download Template</button>
+                                </div>
+                            </div>
+                            <form id="csvUploadForm">
+                                <div class="form-group">
+                                    <label>Select CSV File:</label>
+                                    <input type="file" id="csvFile" accept=".csv,.txt" required>
+                                </div>
+                                <div class="csv-options">
+                                    <label><input type="checkbox" id="hasHeader" checked> File has header row</label>
+                                    <label><input type="checkbox" id="skipCSVErrors" checked> Skip invalid rows</label>
+                                    <label><input type="checkbox" id="validateData" checked> Validate POI data</label>
+                                </div>
+                                <button type="submit">Upload CSV (Encrypted)</button>
+                                <button type="button" id="testIndianPOI" class="test-btn">Test with Indian POI Data</button>
+                            </form>
+                            <div id="csvPreview" class="csv-preview"></div>
+                        </div>
+                        
+                        <div class="uploaded-data">
+                            <div class="uploaded-data-header">
+                                <h4>Uploaded POI Data</h4>
+                                <button id="refreshDataBtn" class="refresh-btn" title="Refresh data">
+                                    <i class="fas fa-sync-alt"></i> Refresh
+                                </button>
+                            </div>
+                            <div id="adminDataList"></div>
+                        </div>
+                        
+                        <button id="adminLogout" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Section -->
+            <section id="user" class="section">
+                <div class="module-container">
+                    <h2><i class="fas fa-user"></i> User Module</h2>
+                    
+                    <div class="auth-container" id="userAuth">
+                        <div class="auth-tabs">
+                            <button class="tab-btn active" data-tab="userLogin">Login</button>
+                            <button class="tab-btn" data-tab="userRegister">Register</button>
+                        </div>
+                        
+                        <div id="userLogin" class="auth-form active">
+                            <h3>User Login</h3>
+                            <form id="userLoginForm">
+                                <input type="email" id="userEmail" placeholder="Email" required>
+                                <input type="password" id="userPassword" placeholder="Password" required>
+                                <button type="submit">Login</button>
+                            </form>
+                            <div class="forgot-password">
+                                <button type="button" id="userForgotPassword" class="forgot-btn">Forgot Password?</button>
+                            </div>
+                        </div>
+                        
+                        <div id="userRegister" class="auth-form">
+                            <h3>User Registration</h3>
+                            <form id="userRegisterForm">
+                                <input type="text" id="userName" placeholder="Full Name" required>
+                                <input type="email" id="userRegEmail" placeholder="Email" required>
+                                <input type="password" id="userRegPassword" placeholder="Password" required>
+                                <button type="submit">Register</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="user-dashboard" id="userDashboard" style="display: none;">
+                        <h3>Privacy-Preserving Location Query</h3>
+                        <div class="search-section">
+                            <form id="locationSearchForm">
+                                <div class="form-group">
+                                    <label>Your Location (Encrypted):</label>
+                                    <div class="location-input">
+                                        <input type="number" id="userLatitude" step="any" placeholder="Latitude" required>
+                                        <input type="number" id="userLongitude" step="any" placeholder="Longitude" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Search Radius (km):</label>
+                                    <input type="number" id="searchRadius" min="0.1" max="50" step="0.1" value="5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>POI Category:</label>
+                                    <select id="searchCategory">
+                                        <option value="">All Categories</option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="hospital">Hospital</option>
+                                        <option value="education">Education</option>
+                                        <option value="safety">Safety</option>
+                                        <option value="school">School</option>
+                                        <option value="gas_station">Gas Station</option>
+                                        <option value="bank">Bank</option>
+                                        <option value="pharmacy">Pharmacy</option>
+                                        <option value="shopping">Shopping</option>
+                                        <option value="entertainment">Entertainment</option>
+                                    </select>
+                                </div>
+                                <button type="submit">Search POI (Encrypted)</button>
+                                <button type="button" id="loadDemoDataBtn" class="demo-btn">Load Demo Data for Testing</button>
+                            </form>
+                        </div>
+                        
+                        <div class="search-results">
+                            <h4>Search Results (Decrypted)</h4>
+                            <div id="searchResults"></div>
+                        </div>
+                        
+                        <button id="userLogout" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="about-content">
+                    <h2>About EPLQ System</h2>
+                    <div class="about-details">
+                        <div class="tech-stack">
+                            <h3>Technology Stack</h3>
+                            <ul>
+                                <li><i class="fab fa-html5"></i> HTML5</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+                                <li><i class="fas fa-database"></i> Firebase</li>
+                                <li><i class="fas fa-lock"></i> AES Encryption</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="features-list">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Privacy-preserving spatial range queries</li>
+                                <li>Predicate-only encryption for inner product range</li>
+                                <li>Tree index structure for optimized queries</li>
+                                <li>Secure user authentication</li>
+                                <li>Password reset functionality</li>
+                                <li>Real-time encrypted data handling</li>
+                                <li>Location privacy protection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="help-section">
+                            <h3>🔑 Password Reset Help</h3>
+                            <div class="help-content">
+                                <p><strong>Forgot your password?</strong> No problem!</p>
+                                <ol>
+                                    <li>Go to the login form (Admin or User)</li>
+                                    <li>Click "Forgot Password?" below the login button</li>
+                                    <li>Enter your registered email address</li>
+                                    <li>Check your email for the reset link</li>
+                                    <li>Click the link and set a new password</li>
+                                    <li>Return here and login with your new password</li>
+                                </ol>
+                                <p><em>💡 Tip: Check your spam folder if you don't see the email!</em></p>
+                            </div>
+                        </div>
+                        
+                        <div class="domain-info">
+                            <h3>Domain: Public Safety</h3>
+                            <p>This system is designed to enhance public safety by enabling privacy-preserving location-based services that protect user privacy while providing essential location information.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 EPLQ System - Unified Mentor Internship Project</p>
+        </footer>
+    </div>
+
+    <!-- Password Reset Modal -->
+    <div id="passwordResetModal" class="password-reset-modal">
+        <div class="password-reset-content">
+            <h3>🔑 Reset Password</h3>
+            <p>Enter your email address and we'll send you a link to reset your password.</p>
+            <input type="email" id="resetEmailInput" placeholder="Enter your email address" required>
+            <div class="password-reset-buttons">
+                <button id="sendResetBtn" class="btn-send-reset">Send Reset Email</button>
+                <button id="cancelResetBtn" class="btn-cancel-reset">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/encryption.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>
