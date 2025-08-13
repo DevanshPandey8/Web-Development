@@ -1,0 +1,293 @@
+/* Storage optimization styles */
+
+/* Storage badges */
+.storage-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.storage-base64 { background-color: #4CAF50; }
+.storage-imgur { background-color: #1BB76E; }
+.storage-external { background-color: #2196F3; }
+.storage-firebase { background-color: #FF5722; }
+
+/* Document header with storage info */
+.document-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.document-title {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* Storage usage dashboard */
+.storage-dashboard {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.storage-dashboard h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.usage-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.usage-item {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #ccc;
+}
+
+.usage-item.firebase { border-left-color: #FF5722; }
+.usage-item.base64 { border-left-color: #4CAF50; }
+.usage-item.imgur { border-left-color: #1BB76E; }
+.usage-item.external { border-left-color: #2196F3; }
+
+.usage-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.usage-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.usage-percentage {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Progress bars */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.progress-fill.warning { background-color: #FF9800; }
+.progress-fill.danger { background-color: #F44336; }
+
+/* Migration results */
+.migration-results {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.migration-results .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.migration-results .stat {
+    text-align: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.migration-results .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.migration-results .value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* External link instruction */
+.external-link-instruction {
+    background: #e3f2fd;
+    border: 1px solid #2196F3;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.external-link-instruction h4 {
+    margin-top: 0;
+    color: #1976D2;
+}
+
+.external-link-instruction ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.external-link-instruction button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Storage optimization alerts */
+.storage-alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 4px solid;
+}
+
+.storage-alert.info {
+    background: #e3f2fd;
+    border-left-color: #2196F3;
+    color: #1976D2;
+}
+
+.storage-alert.warning {
+    background: #fff3e0;
+    border-left-color: #FF9800;
+    color: #E65100;
+}
+
+.storage-alert.danger {
+    background: #ffebee;
+    border-left-color: #F44336;
+    color: #C62828;
+}
+
+/* File upload enhancements */
+.file-upload-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.file-upload-zone.dragover {
+    border-color: #2196F3;
+    background: #e3f2fd;
+}
+
+.file-size-indicator {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.file-size-indicator.warning {
+    color: #FF9800;
+}
+
+.file-size-indicator.error {
+    color: #F44336;
+}
+
+/* Storage method selector */
+.storage-method-selector {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.storage-method-selector h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.storage-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.storage-option:hover {
+    background: #f0f0f0;
+    border-color: #2196F3;
+}
+
+.storage-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.storage-option-info {
+    flex: 1;
+}
+
+.storage-option-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.storage-option-description {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .usage-breakdown {
+        grid-template-columns: 1fr;
+    }
+    
+    .migration-results .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .document-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .storage-badge {
+        margin-top: 5px;
+    }
+}

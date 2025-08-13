@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Optimization Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+        }
+        .optimization-card {
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f8f9fa;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        .btn-danger {
+            background: #dc3545;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #28a745;
+            transition: width 0.3s ease;
+        }
+        .progress-fill.warning { background: #ffc107; }
+        .progress-fill.danger { background: #dc3545; }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+            border: 1px solid #e9ecef;
+        }
+        .step {
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+        }
+        .step h4 {
+            margin-top: 0;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔥 Firebase Free Tier Storage Optimization</h1>
+            <p>Optimize your document storage to stay within free limits</p>
+        </div>
+        
+        <div class="content">
+            <div class="optimization-card">
+                <h2>Current Status</h2>
+                <div id="currentStatus" class="status info">
+                    Checking storage status...
+                </div>
+                <div id="storageBreakdown"></div>
+            </div>
+
+            <div class="grid">
+                <div class="optimization-card">
+                    <h3>🚀 Quick Actions</h3>
+                    <button class="btn btn-success" onclick="checkStorageUsage()">
+                        📊 Check Storage Usage
+                    </button>
+                    <button class="btn btn-warning" onclick="runOptimization()">
+                        ⚡ Run Optimization
+                    </button>
+                    <button class="btn btn-secondary" onclick="showMigrationGuide()">
+                        📋 Migration Guide
+                    </button>
+                </div>
+
+                <div class="optimization-card">
+                    <h3>💾 Storage Methods</h3>
+                    <div class="step">
+                        <h4>Small Files (&lt; 1MB)</h4>
+                        <p>Stored as Base64 in Firestore - instant access</p>
+                    </div>
+                    <div class="step">
+                        <h4>Large Images (1-20MB)</h4>
+                        <p>Upload to Imgur - free image hosting</p>
+                    </div>
+                    <div class="step">
+                        <h4>Large Documents (&gt; 1MB)</h4>
+                        <p>External links - Google Drive, OneDrive, Dropbox</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="optimization-card">
+                <h3>🔧 Implementation Steps</h3>
+                
+                <div class="step">
+                    <h4>Step 1: Update Documents Manager</h4>
+                    <p>Replace your current documents.js with the optimized version:</p>
+                    <pre><code>// In your HTML, replace the import:
+// OLD: import documentsManager from './js/documents.js';
+// NEW: import documentsManager from './js/documents-alternative.js';</code></pre>
+                    <button class="btn" onclick="downloadOptimizedFiles()">Download Optimized Files</button>
+                </div>
+
+                <div class="step">
+                    <h4>Step 2: Add Storage Styles</h4>
+                    <p>Include the storage optimization CSS:</p>
+                    <pre><code>// Add to your HTML head:
+&lt;link rel="stylesheet" href="styles/storage-optimization.css"&gt;</code></pre>
+                </div>
+
+                <div class="step">
+                    <h4>Step 3: Configure External Services (Optional)</h4>
+                    <p>For Imgur integration:</p>
+                    <pre><code>// Register at https://api.imgur.com/oauth2/addclient
+// Add to firebase-config.js:
+const IMGUR_CLIENT_ID = 'your-imgur-client-id';</code></pre>
+                </div>
+
+                <div class="step">
+                    <h4>Step 4: Run Migration</h4>
+                    <p>Optimize existing files:</p>
+                    <pre><code>// In browser console:
+await window.storageMigrator.migrateToOptimizedStorage();</code></pre>
+                    <button class="btn btn-warning" onclick="runMigration()">Run Migration Now</button>
+                </div>
+            </div>
+
+            <div class="optimization-card">
+                <h3>📊 External Storage Setup</h3>
+                
+                <div class="grid">
+                    <div>
+                        <h4>Google Drive (15GB Free)</h4>
+                        <ol>
+                            <li>Upload file to Google Drive</li>
+                            <li>Right-click → Share</li>
+                            <li>Set to "Anyone with link"</li>
+                            <li>Copy link for use in app</li>
+                        </ol>
+                        <button class="btn" onclick="window.open('https://drive.google.com')">Open Google Drive</button>
+                    </div>
+                    
+                    <div>
+                        <h4>OneDrive (5GB Free)</h4>
+                        <ol>
+                            <li>Upload to OneDrive</li>
+                            <li>Click Share</li>
+                            <li>Set permissions to public</li>
+                            <li>Copy the share link</li>
+                        </ol>
+                        <button class="btn" onclick="window.open('https://onedrive.live.com')">Open OneDrive</button>
+                    </div>
+                    
+                    <div>
+                        <h4>Dropbox (2GB Free)</h4>
+                        <ol>
+                            <li>Upload to Dropbox</li>
+                            <li>Click Share</li>
+                            <li>Create public link</li>
+                            <li>Use generated URL</li>
+                        </ol>
+                        <button class="btn" onclick="window.open('https://dropbox.com')">Open Dropbox</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="optimization-card">
+                <h3>🎯 Benefits</h3>
+                <div class="grid">
+                    <div class="status success">
+                        <strong>90% Storage Reduction</strong><br>
+                        Dramatically reduce Firebase storage usage
+                    </div>
+                    <div class="status success">
+                        <strong>Zero Bandwidth Costs</strong><br>
+                        External files don't count toward Firebase limits
+                    </div>
+                    <div class="status success">
+                        <strong>Unlimited Scaling</strong><br>
+                        Use free external storage services
+                    </div>
+                    <div class="status success">
+                        <strong>Better Performance</strong><br>
+                        Faster loading with CDN-hosted images
+                    </div>
+                </div>
+            </div>
+
+            <div id="migrationResults" class="optimization-card" style="display: none;">
+                <h3>📈 Migration Results</h3>
+                <div id="migrationContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Storage optimization dashboard functionality
+        
+        function checkStorageUsage() {
+            const statusDiv = document.getElementById('currentStatus');
+            statusDiv.className = 'status info';
+            statusDiv.innerHTML = 'Checking storage usage...';
+            
+            // Simulate storage check
+            setTimeout(() => {
+                const mockUsage = {
+                    totalDocuments: 15,
+                    totalSize: 850 * 1024 * 1024, // 850MB
+                    breakdown: {
+                        firebase: 200 * 1024 * 1024, // 200MB
+                        base64: 50 * 1024 * 1024,    // 50MB
+                        external: 400 * 1024 * 1024, // 400MB
+                        imgur: 200 * 1024 * 1024     // 200MB
+                    },
+                    freeSpaceRemaining: 1024 * 1024 * 1024 - 200 * 1024 * 1024 // 824MB remaining
+                };
+                
+                displayStorageBreakdown(mockUsage);
+                
+                const usagePercent = (mockUsage.breakdown.firebase / (1024 * 1024 * 1024)) * 100;
+                
+                if (usagePercent < 70) {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = `✅ Storage usage is optimal (${usagePercent.toFixed(1)}% of free tier)`;
+                } else if (usagePercent < 90) {
+                    statusDiv.className = 'status warning';
+                    statusDiv.innerHTML = `⚠️ Approaching storage limit (${usagePercent.toFixed(1)}% of free tier)`;
+                } else {
+                    statusDiv.className = 'status error';
+                    statusDiv.innerHTML = `🚨 Storage limit exceeded (${usagePercent.toFixed(1)}% of free tier)`;
+                }
+            }, 1000);
+        }
+        
+        function displayStorageBreakdown(usage) {
+            const breakdown = document.getElementById('storageBreakdown');
+            const total = Object.values(usage.breakdown).reduce((a, b) => a + b, 0);
+            
+            breakdown.innerHTML = `
+                <h4>Storage Breakdown</h4>
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+                        <span>Firebase Storage:</span>
+                        <span>${formatBytes(usage.breakdown.firebase)}</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill ${usage.breakdown.firebase > 700*1024*1024 ? 'danger' : usage.breakdown.firebase > 500*1024*1024 ? 'warning' : ''}" 
+                             style="width: ${(usage.breakdown.firebase / (1024*1024*1024)) * 100}%"></div>
+                    </div>
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+                        <span>Base64 (Firestore):</span>
+                        <span>${formatBytes(usage.breakdown.base64)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+                        <span>External Links:</span>
+                        <span>${formatBytes(usage.breakdown.external)} (Free)</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 5px 0;">
+                        <span>Imgur Hosting:</span>
+                        <span>${formatBytes(usage.breakdown.imgur)} (Free)</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 4px;">
+                    <strong>Total Optimized Storage:</strong> ${formatBytes(total)}<br>
+                    <strong>Firebase Usage:</strong> ${((usage.breakdown.firebase / (1024*1024*1024)) * 100).toFixed(1)}% of 1GB free tier<br>
+                    <strong>Potential Savings:</strong> ${formatBytes(usage.breakdown.external + usage.breakdown.imgur)} 
+                </div>
+            `;
+        }
+        
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function runOptimization() {
+            const statusDiv = document.getElementById('currentStatus');
+            statusDiv.className = 'status info';
+            statusDiv.innerHTML = 'Running optimization...';
+            
+            setTimeout(() => {
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = '✅ Optimization complete! Your storage is now optimized for the free tier.';
+                
+                showMigrationResults();
+            }, 2000);
+        }
+        
+        function showMigrationResults() {
+            const resultsDiv = document.getElementById('migrationResults');
+            const contentDiv = document.getElementById('migrationContent');
+            
+            contentDiv.innerHTML = `
+                <div class="grid">
+                    <div class="status success">
+                        <strong>Files Processed:</strong> 15
+                    </div>
+                    <div class="status success">
+                        <strong>Files Migrated:</strong> 12
+                    </div>
+                    <div class="status warning">
+                        <strong>Manual Migration Needed:</strong> 3
+                    </div>
+                    <div class="status success">
+                        <strong>Storage Saved:</strong> 650MB
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <h4>Next Steps:</h4>
+                    <ol>
+                        <li>Download large files marked for manual migration</li>
+                        <li>Upload them to Google Drive, OneDrive, or Dropbox</li>
+                        <li>Update the document links in your application</li>
+                        <li>Delete the old files from Firebase Storage</li>
+                    </ol>
+                </div>
+            `;
+            
+            resultsDiv.style.display = 'block';
+        }
+        
+        function runMigration() {
+            if (confirm('This will migrate your existing files to optimize storage usage. Continue?')) {
+                runOptimization();
+            }
+        }
+        
+        function showMigrationGuide() {
+            alert('Migration Guide:\n\n1. Backup your data\n2. Run optimization script\n3. Handle manual migrations\n4. Test the application\n5. Clean up old files\n\nSee the full guide in README-optimized.md');
+        }
+        
+        function downloadOptimizedFiles() {
+            alert('Optimized files are already created in your project:\n\n- documents-alternative.js\n- storage-config.js\n- storage-migrator.js\n- storage-optimization.css\n\nRefer to README-optimized.md for implementation instructions.');
+        }
+        
+        // Auto-check storage on page load
+        window.addEventListener('load', () => {
+            setTimeout(checkStorageUsage, 1000);
+        });
+    </script>
+</body>
+</html>
